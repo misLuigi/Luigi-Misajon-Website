@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/Abstract\ Smooth\ Dark\ blue\ with\ Black.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: whitesmoke;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}

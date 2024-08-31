@@ -15,7 +15,7 @@
             <div class="background">
                 <ul class="name">
                     <li>Hi! My names is Luigi Torres Misajon</li>
-                    <li>I am a Web Developer</li>
+                    <li>I am a <span id="changing-text">Web Developer</span></li>
                 </ul>
                 <ul class="clickables">
                     <li>Resume</li>
@@ -25,6 +25,19 @@
                     <button class="button">Contact Me</button>
                 </ul>
         </main>
-    </div>
+            </div>
+
+<script>
+    const texts = ["Web Developer", "Coder", "Hobbiest Photographer", "Virtual Social Media Marketing Specialist", "Content Marketing Specialist", "Freelancer"]
+    let count = 0;
+    const textElement = document.getElementById("changing-text");
+
+    function changeText() {
+        textElement.textContent = texts[count];
+        count = (count + 1) % texts.length;
+    }
+
+    setInterval(changeText, 2000);
+</script>
 </body>
 </html>

@@ -10,11 +10,17 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 5px;
 }
 
 .logo {
     width: 40px;
     height: auto;
     margin-right: 5px;
+}
+
+.name, .clickables {
+    list-style: none;
+
 }

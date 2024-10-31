@@ -7,7 +7,6 @@
     font-family: "Bebas Neue" , sans-serif;
 }
 body {
-    background: rgb(84,84, 84);
     color: rgb(214, 214, 214);
 }
 
@@ -18,7 +17,6 @@ body {
     width: 100%;
     padding: 20px 10px;
     background: transparent;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +28,7 @@ body {
     color: rgb(214, 214, 214);
     text-decoration: none;
     font-weight: 600;
+    padding: 0 10%;
 }
 
 .navbar a {
@@ -47,6 +46,9 @@ body {
 
 .home {
     height: 100vh;
+    background: url('images/website\ Background\ Cover.png') no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -108,5 +110,51 @@ body {
 }
 
 .button a:hover::before {
+    width: 100%;
+}
+
+.home-socia-icons {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-socia-icons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(126, 42, 42);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(126, 42, 42);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-socia-icons a {
+    color: rgb(214, 214, 214);
+}
+
+.home-socia-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(126, 42, 42);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-socia-icons a:hover::before {
     width: 100%;
 }

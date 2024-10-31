@@ -1,26 +1,112 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background: url(images/Abstract\ Smooth\ Dark\ blue\ with\ Black.jpg) no-repeat center center fixed;
-    background-size: cover;
-    color: whitesmoke;
-    height: 100%;
+    box-sizing: border-box;
+    font-family: "Bebas Neue" , sans-serif;
+}
+body {
+    background: rgb(84,84, 84);
+    color: rgb(214, 214, 214);
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+
     display: flex;
     align-items: center;
-    justify-content: left;
-    margin-left: 5px;
+    justify-content: space-between;
+    z-index: 100;
 }
 
 .logo {
-    width: 40px;
-    height: auto;
-    margin-right: 5px;
+    font-size: 25px;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.name, .clickables {
-    list-style: none;
+.navbar a {
+    font-size: 18px;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover, 
+.navbar a.active {
+    color: rgb(126, 42, 42);
+}
 
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.home-content .button {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    margin: 20px 0 40px;
+}
+
+.button a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(126, 42, 42);
+    border: 2px solid rgb(126, 42, 42);
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(214, 214, 214);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.button a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(84, 84, 84);
+    z-index: -1;
+    transition: .5s;
+}
+
+.button a:hover::before {
+    width: 100%;
 }
